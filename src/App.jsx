@@ -8,7 +8,7 @@ export default function App() {
   const [year, setYear] = useState("2023");
   return (
     <div className="App">
-      <h1>Liczba Porad Stomatologicznych</h1>
+      <h1>Number of professional advice</h1>
       {/* Rok */}
       <Year updateYear={setYear} />
       {/* Dodaj nową poradę */}

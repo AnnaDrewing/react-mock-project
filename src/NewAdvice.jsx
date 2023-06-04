@@ -50,7 +50,7 @@ export default function NewAdvice({ year }) {
     //     if (err) return console.log(err);
     //   }
     // );
-    alert("Nowa porada dodana!");
+    alert("New advice successfully added!");
   };
   return (
     <div>
@@ -61,7 +61,7 @@ export default function NewAdvice({ year }) {
         className="Button"
         sx={{ m: 2 }}
       >
-        Dodaj nową poradę
+        Add New Advice
       </Button>
 
       {addingNewAdvice && (
@@ -69,28 +69,28 @@ export default function NewAdvice({ year }) {
           <FormGroup className="Checkboxes">
             <FormControlLabel
               control={<Checkbox />}
-              label="Kobieta"
+              label="Female"
               name="female"
               id="female"
               onChange={updateForm}
             />
             <FormControlLabel
               control={<Checkbox />}
-              label="Poniżej 18 r.ż."
+              label="Minor"
               name="minor"
               id="minor"
               onChange={updateForm}
             />
             <FormControlLabel
               control={<Checkbox />}
-              label="Powyżej 65 r.ż."
+              label="Pensioner"
               name="pensioner"
               id="pensioner"
               onChange={updateForm}
             />
           </FormGroup>
           <Button id="save-advice" onClick={saveNewAdvice} variant="outlined">
-            Zapisz poradę
+            Save New Advice
           </Button>
         </div>
       )}

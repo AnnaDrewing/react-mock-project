@@ -18,26 +18,24 @@ export default function ShowStats(props) {
         className="Button"
         sx={{ m: 2 }}
       >
-        Wyświetl statystykę
+        Show Statistics
       </Button>
       {showingStats && isDataFound && (
         <div>
-          <p id="info-all">Wszystkie porady: {patientDataJson[year].all}</p>
+          <p id="info-all">All advice: {patientDataJson[year].all}</p>
           <p id="info-female">
-            Porady udzielone kobietom: {patientDataJson[year].female}
+            Advice given to women: {patientDataJson[year].female}
           </p>
           <p id="info-minor">
-            Porady udzielone osobom poniżej 18 r.ż.:{" "}
-            {patientDataJson[year].minor}
+            Advice given to minors: {patientDataJson[year].minor}
           </p>
           <p id="info-pensioner">
-            Porady udzielone osobom powyżej 65 r.ż.:{" "}
-            {patientDataJson[year].pensioner}
+            Advice given to pensioners: {patientDataJson[year].pensioner}
           </p>
         </div>
       )}
       {!isDataFound && (
-        <Alert severity="info">Brak danych na wybrany rok</Alert>
+        <Alert severity="info">No data for the chosen year</Alert>
       )}
     </div>
   );
